@@ -221,7 +221,7 @@ header{
 }
 .receive{
     margin-left: 80px;
-    text-align: right;
+    text-align:  left;
     padding-left: 10px;
     background-color: white;
 }

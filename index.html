@@ -99,39 +99,10 @@
                         <div class="space">
                             
                         </div>
-                        <div class="rowchat  messagesend">
-                            <div class="messagechat send ">
-                                Lorem ipsum dolor sit, amet Lorem ipsum dolo Lorem 
-                            </div>
-                        </div>
-                        <div class="rowchat messagereceive">
-                            <div class="messagechat receive">
-                                Tutto fatto!
-                            </div>
-                        </div>
-                        <div class="rowchat messagesend">
-                            <div class="messagechat send ">
-                                Lorem ipsum dolor sit, amet Lorem ipsum dolo Lorem 
-                            </div>
-                        </div>
-                        <div class="rowchat messagereceive">
-                            <div class="messagechat receive">
-                                Tutto fatto!
-                            </div>
-                        </div>
-                        <div class="rowchat messagesend">
-                            <div class="messagechat send ">
-                                Lorem ipsum dolor sit, amet Lorem ipsum dolo Lorem 
-                            </div>
-                        </div>
-                        <div class="rowchat messagesend">
-                            <div class="messagechat send ">
-                                Lorem ipsum dolor sit, amet Lorem ipsum dolo Lorem 
-                            </div>
-                        </div>
-                        <div class="rowchat messagereceive">
-                            <div class="messagechat receive">
-                                Tutto fatto!
+                        <div class="rowchat messagesend" v-for="(messaggio , indice) in contacts[thisChat].messages" 
+                        :class='messaggio.status === "sent" ? "messagesend" : "messagereceive"' >
+                            <div class="messagechat send" :class='messaggio.status === "sent" ? "send" : "receive"'>
+                               {{messaggio.message}}
                             </div>
                         </div>
                     </div>
