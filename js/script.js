@@ -166,13 +166,13 @@ createApp({
                     ],
                 }
             ]
-            
+
         }
     },
     methods:{
 
     },
     created(){
-
+        console.log(this.contacts[0].avatar);
     }
 }).mount("#app")

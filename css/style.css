@@ -31,7 +31,7 @@ header{
 .sidebar{
     height: 95vh;
     width: 35%;
-    background-color:lightyellow;
+    background-color:#eaeaea;
 }
 .utente{
     width: 60%;
@@ -87,16 +87,67 @@ header{
     color: grey;
 }
 .searchchat{
-    height: 6vh;
-    background-color: red;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.chatsidebar{
-    height: 71vh;
-    background-color: blue;
+.searchchat input{
+    height: 76%;
+    width: 83%;
+    border: none;
 }
+.searchchat label{
+    width: 15%;
+    height: 76%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3apx solid lightgrey;
+}
+.searchchat i{
+    color: grey;
+    font-size: large;
+}
+.chatsidebar{
+    height: 72vh;
+    background-color: white;
+    overflow-y: scroll;
+}
+.row{
+    height: 10vh;
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+}
+.row:hover{
+    background-color:#e9ebeb
+}
+.avatar{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.avatar img{
+    width: 13%;
+    border-radius: 50%;
+    margin-left: 15px;
+    display: inline-block;
+}
+.chatinfo{
+    height: 7vh;
+    margin-left: 20px;
+    align-items: flex-start;
+}
+.chatinfo p{
+    display: block;
+}
+.name-profile{
+    font-size: 1.2rem;
+}
+.end-message{
+    color: lightgray;
+
 /* Content */
 .content{
     height: 95vh;

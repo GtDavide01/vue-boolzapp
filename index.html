@@ -57,11 +57,20 @@
                         <!-- ricerca chat -->
                         <div class="searchchat">
                             <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                            <input type="text" id="search">
+                            <input type="text" id="search" placeholder="Cerca o inizia una nuova chat">
                         </div>
                         <!-- chat -->
                         <div class="chatsidebar">
-
+                            <div class="row" v-for="(valore , indice) in contacts">
+                                <div class="avatar">
+                                    <img :src='"img/avatar"+valore.avatar+".jpg"' alt="">
+                                    <div class="chatinfo">
+                                        <p class="name-profile">{{valore.name}}</p>
+                                        <p class="end-message">Ultimo messaggio inviato</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </main>
                 </div>
