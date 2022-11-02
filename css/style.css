@@ -18,6 +18,7 @@ header{
     height: 8vh;
     background-color: #eaeaea;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 /* ContainerWhatsapp */
@@ -51,6 +52,7 @@ header{
     display: inline-block;
 }
 .option{
+    height: 100%;
     width: 40%;
     border-right: .2px solid lightgrey;
     display: flex;
@@ -147,10 +149,36 @@ header{
 }
 .end-message{
     color: lightgray;
-
+}
 /* Content */
 .content{
     height: 95vh;
     width: 65%;
     background-color:lightblue;
+}
+.avatar-selezionato{
+    display: flex;
+}
+.avatar-selezionato img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: inline-block;
+}
+.avatarinfo{
+    padding-left: 20px;
+    margin: auto 0;
+}
+.last-access{
+    color: grey;
+}
+.contentchat{
+    height: 79vh;
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+}
+footer{
+    height: 8vh;
+    background-color: #f3eeea;
 }
