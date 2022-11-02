@@ -121,6 +121,7 @@ header{
     height: 10vh;
     display: flex;
     border-bottom: 1px solid lightgrey;
+    cursor: pointer;
 }
 .row:hover{
     background-color:#e9ebeb
@@ -172,6 +173,12 @@ header{
 }
 .last-access{
     color: grey;
+}
+.utente-selected{
+    width: 60%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 .contentchat{
     height: 79vh;

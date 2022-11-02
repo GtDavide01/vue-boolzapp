@@ -165,14 +165,16 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            thisChat: 0,
 
         }
     },
     methods:{
-
+        showThisChat (chatClicked){
+            this.thisChat = chatClicked;
+        },
     },
     created(){
-        console.log(this.contacts[0].avatar);
     }
 }).mount("#app")

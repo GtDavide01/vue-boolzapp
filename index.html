@@ -61,7 +61,7 @@
                         </div>
                         <!-- chat -->
                         <div class="chatsidebar">
-                            <div class="row" v-for="(valore , indice) in contacts">
+                            <div @click="showThisChat(indice)" class="row" v-for="(valore , indice) in contacts">
                                 <div class="avatar">
                                     <img :src='"img/avatar"+valore.avatar+".jpg"' alt="">
                                     <div class="chatinfo">
@@ -78,11 +78,11 @@
                     <!-- header content -->
                     <header>
                         <!-- utente seleziona -->
-                        <div class="utente">
+                        <div class="utente-selected">
                             <div class="avatar-selezionato">
-                                <img src="img/avatar_io.jpg" alt="">
+                                <img :src='"img/avatar"+contacts[thisChat].avatar+".jpg"' alt="">
                                 <div class="avatarinfo">
-                                    <p class="name-profile">Nome</p>
+                                    <p class="name-profile">{{contacts[thisChat].name}}</p>
                                     <p class="last-access">Ultimo messaggio inviato alle</p>
                                 </div>
                             </div>
