@@ -185,6 +185,44 @@ header{
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 }
+.rowchat{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.firstmessage{
+    margin-top: 50px;
+}
+.messagechat{
+    width: 30%;
+    min-height: 6vh;
+    max-height: 10vh;
+    min-width: 30%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.messagesend{
+    display: flex;
+    justify-content: end;
+}
+.messagereceive{
+    display: flex;
+    justify-content: start;
+}
+.send{
+    padding-left: 10px;
+    margin-right: 80px;
+    text-align: left;
+    background-color: #d5f9ba;
+}
+.receive{
+    margin-left: 80px;
+    text-align: right;
+    padding-left: 10px;
+    background-color: white;
+}
+/* footer */
 footer{
     height: 8vh;
     background-color: #f3eeea;
