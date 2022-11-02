@@ -5,3 +5,29 @@
     box-sizing: border-box;
 }
 /* COMMON */
+.containerall{
+    background-color: #dbdbd4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ContainerWhatsapp */
+.whatsapp{
+    width:80%;
+    height: 95vh;
+    background-color: white;
+    display: flex;
+}
+/* SideBar */
+.sidebar{
+    height: 95vh;
+    width: 35%;
+    background-color:lightyellow;
+}
+/* Content */
+.content{
+    height: 95vh;
+    width: 65%;
+    background-color:lightblue;
+}
