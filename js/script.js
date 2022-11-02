@@ -167,13 +167,38 @@ createApp({
                 }
             ],
             thisChat: 0,
-
+            userMessage: "",
+            data: new Date(),
         }
     },
     methods:{
         showThisChat (chatClicked){
             this.thisChat = chatClicked;
         },
+        setMessage (){
+            setTimeout(() =>{
+                this.contacts[this.thisChat].messages.push(
+                    {
+                        date: this.data.getHours(),
+                        message: 'Ok',
+                        status: 'received'
+                    }
+                )
+            } ,1000)
+        },
+        addMessage: function(){
+            if(this.userMessage){
+                this.contacts[this.thisChat].messages.push(
+                    {
+                        date: this.data.getHours(),
+                        message: this.userMessage,
+                        status: 'sent'
+                    }
+                )
+                this.setMessage();
+                this.userMessage="";   
+            }
+        }
     },
     created(){
     }

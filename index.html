@@ -66,7 +66,7 @@
                                     <img :src='"img/avatar"+valore.avatar+".jpg"' alt="">
                                     <div class="chatinfo">
                                         <p class="name-profile">{{valore.name}}</p>
-                                        <p class="end-message">Ultimo messaggio inviato</p>
+                                        <p class="end-message">{{contacts[indice].messages.slice(-1).pop().message}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                                 <img :src='"img/avatar"+contacts[thisChat].avatar+".jpg"' alt="">
                                 <div class="avatarinfo">
                                     <p class="name-profile">{{contacts[thisChat].name}}</p>
-                                    <p class="last-access">Ultimo messaggio inviato alle</p>
+                                    <p class="last-access">Ultimo messaggio inviato alle {{contacts[thisChat].messages.slice(-1).pop().date}}</p>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                     <footer>
                         <i class="fa-regular fa-face-smile"></i>
                         <label for="chat-user"></label>
-                        <input type="text" id="chat-user" placeholder="Scrivi un messaggio">
+                        <input @keyup.enter="addMessage" type="text" id="chat-user" placeholder="Scrivi un messaggio" v-model.trim="userMessage">
                         <i class="fa-solid fa-microphone"></i>
                     </footer>
                 </div>
