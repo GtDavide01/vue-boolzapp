@@ -6,7 +6,7 @@
 }
 /* COMMON */
 .containerall{
-    background-color: #dbdbd4;
+    background: linear-gradient(#009688 10%, #dbdbd4 90%);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -186,9 +186,12 @@ header{
     overflow-y: scroll;
 }
 .rowchat{
-    height: 10vh;
+    height: 8vh;
     display: flex;
     align-items: center;
+}
+.space{
+    height: 8vh;
 }
 .firstmessage{
     margin-top: 50px;
