@@ -11,6 +11,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+/* header sidebar e content */
+header{
+    height: 8vh;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
 }
 /* ContainerWhatsapp */
 .whatsapp{
@@ -24,6 +32,70 @@
     height: 95vh;
     width: 35%;
     background-color:lightyellow;
+}
+.utente{
+    width: 60%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.avatar-io{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.avatar-io img{
+    width: 17%;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: inline-block;
+}
+.option{
+    width: 40%;
+    border-right: .2px solid lightgrey;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.option i{
+    margin-right: 20px;
+    color: #b1b1b1;
+    font-size: 1.2rem;
+}
+.notification{
+    background-color: #8edafc;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.notif{
+    margin-left: 30px;
+    background-color: #f2fbff;
+    line-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+}
+.notif i{
+   font-size: 1.2rem;
+   color: #8edafc;
+}
+.notif-text{
+    margin-left: 10px;
+}
+.notif-text a{
+    color: grey;
+}
+.searchchat{
+    height: 6vh;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chatsidebar{
+    height: 71vh;
+    background-color: blue;
 }
 /* Content */
 .content{

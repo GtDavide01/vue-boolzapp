@@ -14,17 +14,63 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@200;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="app">
         <div class="containerall">
             <div class="whatsapp">
+                <!-- sidebar laterale -->
                 <div class="sidebar">
+                    <!-- header sidebar -->
+                    <header>
+                        <!-- div per il profilo utente -->
+                        <div class="utente">
+                            <div class="avatar-io">
+                                <img src="img/avatar_io.jpg" alt="">
+                                <p>Sofia</p>
+                            </div>
+                        </div>
+                        <!-- div per le opzioni chat -->
+                        <div class="option">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </header>
+                    <!-- main sidebar -->
+                    <main>
+                        <!-- attive notifiche -->
+                        <div class="notification">
+                            <div class="notif">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="notif-text">
+                                <p>Ricevi notiche di nuovi mesaggi</p>
+                                <a href="">Attiva notifiche desktop</a>
+                            </div>
+                        </div>
+                        <!-- ricerca chat -->
+                        <div class="searchchat">
+                            <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                            <input type="text" id="search">
+                        </div>
+                        <!-- chat -->
+                        <div class="chatsidebar">
 
+                        </div>
+                    </main>
                 </div>
+                <!-- content contente le chat -->
                 <div class="content">
-                    
+                    <!-- header -->
+                    <header>
+
+                    </header>
                 </div>
             </div>
         </div>
