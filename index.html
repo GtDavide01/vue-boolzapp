@@ -57,11 +57,12 @@
                         <!-- ricerca chat -->
                         <div class="searchchat">
                             <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                            <input type="text" id="search" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" id="search" placeholder="Cerca o inizia una nuova chat" 
+                            v-model.trim="userSearch">
                         </div>
                         <!-- chat -->
                         <div class="chatsidebar">
-                            <div @click="showThisChat(indice)" class="row" v-for="(valore , indice) in contacts">
+                            <div @click="showThisChat(indice)" class="row" v-for="(valore , indice) in contacts" v-show="contacts[indice].name.includes(userSearch)">
                                 <div class="avatar">
                                     <img :src='"img/avatar"+valore.avatar+".jpg"' alt="">
                                     <div class="chatinfo">

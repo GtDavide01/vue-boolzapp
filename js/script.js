@@ -169,6 +169,7 @@ createApp({
             thisChat: 0,
             userMessage: "",
             data: new Date(),
+            userSearch: ""
         }
     },
     methods:{
