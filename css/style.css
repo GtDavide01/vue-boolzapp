@@ -278,6 +278,7 @@ footer input{
     top: 20px;
     padding: 5px;
     display: none;
+    box-shadow:   10px 5px 5px black;
 }
 .active{
     display: block;
@@ -293,4 +294,9 @@ footer input{
 .infomessage , .deletemessage{
     cursor: pointer;
     text-align: center;
+}
+.info-message{
+    height: 10vh;
+    width: 50%;
+    background-color: red;
 }

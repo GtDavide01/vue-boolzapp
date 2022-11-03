@@ -117,7 +117,7 @@
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                                 <div class="delete-info" :class="visible === true && indice === thisMessage ?'active':'' ">
-                                    <p class="infomessage">Info</p>
+                                    <p class="infomessage" @click="alertInfo">Info</p>
                                     <p class="deletemessage" @click="deleteMessage">Elimina</p>
                                 </div>
                             </div>

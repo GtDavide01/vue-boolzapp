@@ -208,6 +208,10 @@ createApp({
         },
         deleteMessage: function(){
           this.contacts[this.thisChat].messages.splice(this.thisMessage , 1);
+        },
+        alertInfo: function(){
+            alert("Messaggio : "+this.contacts[this.thisChat].messages[this.thisMessage].message +
+            "Ora dell'invio :" + this.contacts[this.thisChat].messages[this.thisMessage].date);
         }
     },
     created(){
