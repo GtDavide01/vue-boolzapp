@@ -180,7 +180,7 @@ createApp({
             setTimeout(() =>{
                 this.contacts[this.thisChat].messages.push(
                     {
-                        date: this.data.getHours(),
+                        date: "Oggi ,"+this.data.getHours()+":"+this.data.getMinutes(),
                         message: 'Ok',
                         status: 'received'
                     }
@@ -191,7 +191,7 @@ createApp({
             if(this.userMessage){
                 this.contacts[this.thisChat].messages.push(
                     {
-                        date: this.data.getHours(),
+                        date: "Oggi ,"+this.data.getHours()+":"+this.data.getMinutes(),
                         message: this.userMessage,
                         status: 'sent'
                     }

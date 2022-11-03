@@ -13,6 +13,10 @@
     align-items: center;
     font-family: 'Lato', sans-serif;
 }
+.timechat{
+    font-size: .7rem;
+    color: grey;
+}
 /* header sidebar e content */
 header{
     height: 8vh;
@@ -117,11 +121,18 @@ header{
     background-color: white;
     overflow-y: scroll;
 }
+
 .row{
     height: 10vh;
     display: flex;
     border-bottom: 1px solid lightgrey;
     cursor: pointer;
+    position: relative;
+}
+.time{
+    position:absolute;
+    right: 10px;
+    top: 10px;
 }
 .row:hover{
     background-color:#e9ebeb
@@ -149,7 +160,7 @@ header{
     font-size: 1.2rem;
 }
 .end-message{
-    color: lightgray;
+    color: gray;
 }
 /* Content */
 .content{
@@ -204,6 +215,12 @@ header{
     display: flex;
     align-items: center;
     border-radius: 10px;
+    position: relative;
+}
+.timemessage{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
 }
 .messagesend{
     display: flex;

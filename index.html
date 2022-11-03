@@ -70,6 +70,9 @@
                                         <p class="end-message">{{contacts[indice].messages.slice(-1).pop().message}}</p>
                                     </div>
                                 </div>
+                                <div class="time">
+                                    <span class="timechat">{{contacts[indice].messages.slice(-1).pop().date}}</span>
+                                </div>
                             </div>
                         </div>
                     </main>
@@ -84,7 +87,7 @@
                                 <img :src='"img/avatar"+contacts[thisChat].avatar+".jpg"' alt="">
                                 <div class="avatarinfo">
                                     <p class="name-profile">{{contacts[thisChat].name}}</p>
-                                    <p class="last-access">Ultimo messaggio inviato alle {{contacts[thisChat].messages.slice(-1).pop().date}}</p>
+                                    <p class="last-access">Ultimo messaggio inviato  {{contacts[thisChat].messages.slice(-1).pop().date}}</p>
                                 </div>
                             </div>
                         </div>
@@ -104,6 +107,9 @@
                         :class='messaggio.status === "sent" ? "messagesend" : "messagereceive"' >
                             <div class="messagechat send" :class='messaggio.status === "sent" ? "send" : "receive"'>
                                {{messaggio.message}}
+                               <div class="timemessage">
+                                    <span class="timechat">{{messaggio.date}}</span> 
+                                </div>
                             </div>
                         </div>
                     </div>
