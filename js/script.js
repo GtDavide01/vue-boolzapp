@@ -205,6 +205,8 @@ createApp({
         visibleOptions: function(messageClicked){
             if(this.thisMessage === messageClicked){
                 this.visible = !this.visible;
+            }else{
+                this.visible = true;
             }
             this.thisMessage = messageClicked;
         },
