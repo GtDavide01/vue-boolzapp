@@ -132,7 +132,7 @@
                         <label for="chat-user"></label>
                         <input @keyup.enter="addMessage" type="text" id="chat-user" placeholder="Scrivi un messaggio" v-model.trim="userMessage">
                         <i class="fa-solid fa-microphone" :id="userMessage.length > 0 ? 'none':'' "></i>
-                        <i class="fa-solid fa-paper-plane":id="userMessage.length < 1 ? 'none' : ''" ></i>
+                        <i @click="addMessage" class="fa-solid fa-paper-plane":id="userMessage.length < 1 ? 'none' : ''" ></i>
                     </footer>
                 </div>
             </div>
