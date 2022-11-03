@@ -203,15 +203,17 @@ createApp({
             }
         },
         visibleOptions: function(messageClicked){
-           this.thisMessage = messageClicked;
-           this.visible = !this.visible;
+            if(this.thisMessage === messageClicked){
+                this.visible = !this.visible;
+            }
+            this.thisMessage = messageClicked;
         },
         deleteMessage: function(){
           this.contacts[this.thisChat].messages.splice(this.thisMessage , 1);
         },
         alertInfo: function(){
-            alert("Messaggio : "+this.contacts[this.thisChat].messages[this.thisMessage].message +
-            "Ora dell'invio :" + this.contacts[this.thisChat].messages[this.thisMessage].date);
+            alert("Messaggio :  "+this.contacts[this.thisChat].messages[this.thisMessage].message +
+            " /  Ora dell'invio : " + this.contacts[this.thisChat].messages[this.thisMessage].date);
         }
     },
     created(){

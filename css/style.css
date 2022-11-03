@@ -295,8 +295,6 @@ footer input{
     cursor: pointer;
     text-align: center;
 }
-.info-message{
-    height: 10vh;
-    width: 50%;
-    background-color: red;
+.none{
+    display: none;
 }
