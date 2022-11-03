@@ -171,7 +171,16 @@ createApp({
             data: new Date(),
             userSearch: "",
             visible: false,
-            thisMessage :0
+            thisMessage :0,
+            listWords : [
+                "Ciao come stai?",
+                "Non ti preoccupare , ci vediamo nel pomeriggio ",
+                "Hai da fare adesso ? ",
+                "Ti posso chiamare ? ",
+                "Mi dispiace tantissimo , ma pomeriggio ho da fare!",
+                "Tutto bene grazie , va alla grande!"
+            ],
+            randomNumber : "",
         }
     },
     methods:{
@@ -180,10 +189,12 @@ createApp({
         },
         setMessage (){
             setTimeout(() =>{
+                this.randomNumber =  Math.floor(Math.random() * (5 - 0) + 0);
+                fraseRandom = this.listWords[this.randomNumber];
                 this.contacts[this.thisChat].messages.push(
                     {
                         date: "Oggi ,"+this.data.getHours()+":"+this.data.getMinutes(),
-                        message: 'Ok',
+                        message: fraseRandom,
                         status: 'received'
                     }
                 )
@@ -215,7 +226,9 @@ createApp({
         },
         alertInfo: function(){
             alert("Messaggio :  "+this.contacts[this.thisChat].messages[this.thisMessage].message +
-            " /  Ora dell'invio : " + this.contacts[this.thisChat].messages[this.thisMessage].date);
+            " /  Ora dell'invio : " + this.contacts[this.thisChat].messages[this.thisMessage].date)
+            console.log(this.randomNumber)
+            ;
         }
     },
     created(){
