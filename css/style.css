@@ -210,12 +210,15 @@ header{
 .messagechat{
     width: 30%;
     min-height: 6vh;
-    max-height: 10vh;
+    max-height: 17vh;
     min-width: 30%;
     display: flex;
     align-items: center;
     border-radius: 10px;
     position: relative;
+}
+.messagechat:hover .down {
+    display: block;
 }
 .timemessage{
     position: absolute;
@@ -263,4 +266,23 @@ footer input{
     border: none;
     padding: 13px;
     font-size: 1rem;
+}
+/* bonus milestone 5 */
+.delete-info{
+    height: 5vh;
+    width: 30%;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    padding: 5px;
+    display: none;
+}
+.down{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: grey;
+    display: none;
 }
