@@ -274,10 +274,13 @@ footer input{
     background-color: white;
     border-radius: 5px;
     position: absolute;
-    right: 10px;
-    top: 25px;
+    right: 5px;
+    top: 20px;
     padding: 5px;
     display: none;
+}
+.active{
+    display: block;
 }
 .down{
     position: absolute;
@@ -285,4 +288,9 @@ footer input{
     right: 10px;
     color: grey;
     display: none;
+    cursor: pointer;
+}
+.infomessage , .deletemessage{
+    cursor: pointer;
+    text-align: center;
 }

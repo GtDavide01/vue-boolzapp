@@ -67,11 +67,13 @@
                                     <img :src='"img/avatar"+valore.avatar+".jpg"' alt="">
                                     <div class="chatinfo">
                                         <p class="name-profile">{{valore.name}}</p>
-                                        <p class="end-message">{{contacts[indice].messages.slice(-1).pop().message}}</p>
+                                        <p v-if="contacts[indice].messages.length > 0" class="end-message">{{contacts[indice].messages.slice(-1).pop().message}}</p>
+                                        <p v-else="contacts[indice].messages.length < 0"></p>
                                     </div>
                                 </div>
                                 <div class="time">
-                                    <span class="timechat">{{contacts[indice].messages.slice(-1).pop().date}}</span>
+                                    <span  v-if="contacts[indice].messages.length > 0" class="timechat">{{contacts[indice].messages.slice(-1).pop().date}}</span>
+                                    <p v-else="contacts[indice].messages.length < 0"></p>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +89,8 @@
                                 <img :src='"img/avatar"+contacts[thisChat].avatar+".jpg"' alt="">
                                 <div class="avatarinfo">
                                     <p class="name-profile">{{contacts[thisChat].name}}</p>
-                                    <p class="last-access">Ultimo messaggio inviato  {{contacts[thisChat].messages.slice(-1).pop().date}}</p>
+                                    <p  v-if="contacts[thisChat].messages.length > 0" class="last-access">Ultimo messaggio inviato  {{contacts[thisChat].messages.slice(-1).pop().date}}</p>
+                                    <p v-else="contacts[thisChat].messages.length < 0"></p>
                                 </div>
                             </div>
                         </div>
@@ -110,12 +113,12 @@
                                <div class="timemessage">
                                     <span class="timechat">{{messaggio.date}}</span> 
                                 </div>
-                                <div class="down"@click="">
+                                <div class="down"@click="visibleOptions(indice)" >
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </div>
-                                <div class="delete-info">
-                                    <p>Info</p>
-                                    <p>Elimina </p>
+                                <div class="delete-info" :class="visible === true && indice === thisMessage ?'active':'' ">
+                                    <p class="infomessage">Info</p>
+                                    <p class="deletemessage" @click="deleteMessage">Elimina</p>
                                 </div>
                             </div>
                         </div>

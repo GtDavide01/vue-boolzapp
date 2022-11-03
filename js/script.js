@@ -1,7 +1,7 @@
 const { createApp } = Vue;
 
 createApp({
-    data(){
+    data(){3
         return{
             contacts: [
                 {
@@ -169,7 +169,9 @@ createApp({
             thisChat: 0,
             userMessage: "",
             data: new Date(),
-            userSearch: ""
+            userSearch: "",
+            visible: false,
+            thisMessage :0
         }
     },
     methods:{
@@ -199,6 +201,13 @@ createApp({
                 this.setMessage();
                 this.userMessage="";   
             }
+        },
+        visibleOptions: function(messageClicked){
+           this.thisMessage = messageClicked;
+           this.visible = !this.visible;
+        },
+        deleteMessage: function(){
+          this.contacts[this.thisChat].messages.splice(this.thisMessage , 1);
         }
     },
     created(){
