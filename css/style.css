@@ -295,6 +295,9 @@ footer input{
     cursor: pointer;
     text-align: center;
 }
-.none{
+#none{
     display: none;
+}
+#visibleairplane{
+    display: block;
 }
