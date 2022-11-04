@@ -220,7 +220,8 @@ createApp({
                     }
                 )
                 this.setMessage();
-                this.userMessage="";   
+                this.userMessage=""; 
+                
             }
         },
         //menu a tendina per ogni messaggio 
@@ -261,7 +262,8 @@ createApp({
         },
         //elimina il contatto selezionato
         deleteThisChat: function(){
-            this.contacts.splice(this.thisChat , 1)
+            this.contacts.splice(this.thisChat , 1);
+            this.thisChat = this.contacts.length - 1;            
         }
     },
     created(){
