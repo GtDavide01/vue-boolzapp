@@ -253,6 +253,12 @@ createApp({
                 ],
 
             })
+        },
+        deleteAllChat: function(){
+            this.contacts[this.thisChat].messages.splice(this.thisMessage , 10);
+        },
+        deleteThisChat: function(){
+            this.contacts.splice(this.thisChat , 1)
         }
     },
     created(){

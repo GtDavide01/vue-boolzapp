@@ -314,13 +314,16 @@ footer input{
     top: 50px;
     padding-top: 20px;
     text-align: center;
-    display: none;
 }
 .delete-all{
     font-weight: bold;
+    cursor: pointer;
 }
 #deleteall{
     cursor: pointer;
+}
+#deleteall:hover{
+    color: black;
 }
 #addChat{
     cursor: pointer;
