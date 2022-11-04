@@ -204,7 +204,7 @@ createApp({
             } ,1000)
             setTimeout(() =>{
                 this.messageState = "Online"
-            },3000)
+            },1000)
             setTimeout(() =>{
                 this.messageState =  "Ultimo accesso "+this.contacts[this.thisChat].messages.slice(-1).pop().date;
             },8000)
