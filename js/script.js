@@ -190,6 +190,7 @@ createApp({
         showThisChat (chatClicked){
             this.thisChat = chatClicked;
         },
+        // Crea il messaggio restituito dal bot
         setMessage (){
             setTimeout(() =>{
                 this.messageState = "Online";
@@ -202,16 +203,12 @@ createApp({
                         status: 'received'
                     }
                 )
-                
-            } ,1000)
-            
-                
-          
+            } ,1000);
             setTimeout(() =>{
                 this.messageState =  "Ultimo accesso "+this.contacts[this.thisChat].messages.slice(-1).pop().date;
-            },8000)
-            
+            },8000);
         },
+        // Aggiunge il messaggio inserito dall'utente 
         addMessage: function(){
             if(this.userMessage){
                 this.messageState = "Sta scrivendo..."
@@ -226,6 +223,7 @@ createApp({
                 this.userMessage="";   
             }
         },
+        //menu a tendina per ogni messaggio 
         visibleOptions: function(messageClicked){
             if(this.thisMessage === messageClicked){
                 this.visible = !this.visible;
@@ -234,15 +232,18 @@ createApp({
             }
             this.thisMessage = messageClicked;
         },
+        //elimina il messaggio selezionato
         deleteMessage: function(){
           this.contacts[this.thisChat].messages.splice(this.thisMessage , 1);
         },
+        //informazioni sul messaggio selezionato
         alertInfo: function(){
             alert("Messaggio :  "+this.contacts[this.thisChat].messages[this.thisMessage].message +
             " /  Ora dell'invio : " + this.contacts[this.thisChat].messages[this.thisMessage].date)
             console.log(this.randomNumber)
             ;
         },
+        //inserisce un nuovo contatto all'interno di contacts
         addChat: function(){
             this.contacts.push({
                 name : prompt("Inserisci il nome della nuova chat"),
@@ -254,9 +255,11 @@ createApp({
 
             })
         },
+        //elimina tutte le chat del contatto selezionato
         deleteAllChat: function(){
             this.contacts[this.thisChat].messages.splice(this.thisMessage , 10);
         },
+        //elimina il contatto selezionato
         deleteThisChat: function(){
             this.contacts.splice(this.thisChat , 1)
         }

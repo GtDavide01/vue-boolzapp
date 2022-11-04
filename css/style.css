@@ -33,7 +33,7 @@ header{
     background-color: white;
     display: flex;
 }
-/* SideBar */
+/* SIDEBAR */
 .sidebar{
     height: 95vh;
     width: 35%;
@@ -164,7 +164,7 @@ header{
 .end-message{
     color: gray;
 }
-/* Content */
+/* CONTENUTO */
 .content{
     height: 95vh;
     width: 65%;
@@ -247,7 +247,7 @@ header{
     padding-left: 10px;
     background-color: white;
 }
-/* footer */
+/*FOOTER*/
 footer{
     height: 8vh;
     background-color: #f3eeea;
@@ -269,7 +269,7 @@ footer input{
     padding: 13px;
     font-size: 1rem;
 }
-/* bonus milestone 5 */
+/* CLASSI UTILIZZATE PER I BONUS */
 .delete-info{
     height: 5vh;
     width: 30%;
