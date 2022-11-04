@@ -144,7 +144,8 @@ header{
     align-items: center;
 }
 .avatar img{
-    width: 13%;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin-left: 15px;
     display: inline-block;
@@ -320,4 +321,10 @@ footer input{
 }
 #deleteall{
     cursor: pointer;
+}
+#addChat{
+    cursor: pointer;
+}
+#addChat:hover{
+    color: black;
 }
