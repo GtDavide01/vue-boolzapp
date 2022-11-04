@@ -89,7 +89,7 @@
                                 <img :src='"img/avatar"+contacts[thisChat].avatar+".jpg"' alt="">
                                 <div class="avatarinfo">
                                     <p class="name-profile">{{contacts[thisChat].name}}</p>
-                                    <p  v-if="contacts[thisChat].messages.length > 0" class="last-access">Ultimo messaggio inviato  {{contacts[thisChat].messages.slice(-1).pop().date}}</p>
+                                    <p  v-if="contacts[thisChat].messages.length > 0" class="last-access">{{messageState}}</p>
                                     <p v-else="contacts[thisChat].messages.length < 0"></p>
                                 </div>
                             </div>
@@ -98,7 +98,11 @@
                         <div class="option">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                            <i class="fa-solid fa-ellipsis-vertical" id="deleteall"  ></i>
+                        </div>
+                        <div class="dropmenuchat">
+                            <p class="delete-all">- Elimina tutti i messaggi </p>
+                            <p class="delete-all">- Elimina la chat</p>
                         </div>
                     </header>
                     <!-- main chat -->

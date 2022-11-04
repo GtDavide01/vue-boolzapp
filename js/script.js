@@ -181,6 +181,7 @@ createApp({
                 "Tutto bene grazie , va alla grande!"
             ],
             randomNumber : "",
+            messageState : ""
         }
     },
     methods:{
@@ -198,7 +199,15 @@ createApp({
                         status: 'received'
                     }
                 )
-            } ,1000)
+                this.messageState = "Sta scrivendo..."
+            } ,2000)
+            setTimeout(() =>{
+                this.messageState = "Online"
+            },4000)
+            setTimeout(() =>{
+                this.messageState =  "Ultimo accesso "+this.contacts[this.thisChat].messages.slice(-1).pop().date;
+            },8000)
+            
         },
         addMessage: function(){
             if(this.userMessage){
@@ -232,5 +241,6 @@ createApp({
         }
     },
     created(){
+        this.messageState =  "Ultimo accesso "+this.contacts[this.thisChat].messages.slice(-1).pop().date;
     }
 }).mount("#app")
