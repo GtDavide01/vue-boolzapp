@@ -200,11 +200,11 @@ createApp({
                         status: 'received'
                     }
                 )
-                this.messageState = "Sta scrivendo..."
+                
             } ,1000)
             setTimeout(() =>{
                 this.messageState = "Online"
-            },4000)
+            },3000)
             setTimeout(() =>{
                 this.messageState =  "Ultimo accesso "+this.contacts[this.thisChat].messages.slice(-1).pop().date;
             },8000)
@@ -212,6 +212,7 @@ createApp({
         },
         addMessage: function(){
             if(this.userMessage){
+                this.messageState = "Sta scrivendo..."
                 this.contacts[this.thisChat].messages.push(
                     {
                         date: dt.now().setLocale("it").toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
@@ -239,7 +240,7 @@ createApp({
             " /  Ora dell'invio : " + this.contacts[this.thisChat].messages[this.thisMessage].date)
             console.log(this.randomNumber)
             ;
-        }
+        },
     },
     created(){
         this.messageState =  "Ultimo accesso "+this.contacts[this.thisChat].messages.slice(-1).pop().date;
