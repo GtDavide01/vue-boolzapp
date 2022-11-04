@@ -191,6 +191,7 @@ createApp({
         },
         setMessage (){
             setTimeout(() =>{
+                this.messageState = "Online";
                 this.randomNumber =  Math.floor(Math.random() * (5 - 0) + 0);
                 fraseRandom = this.listWords[this.randomNumber];
                 this.contacts[this.thisChat].messages.push(
@@ -202,9 +203,9 @@ createApp({
                 )
                 
             } ,1000)
-            setTimeout(() =>{
-                this.messageState = "Online"
-            },1000)
+            
+                
+          
             setTimeout(() =>{
                 this.messageState =  "Ultimo accesso "+this.contacts[this.thisChat].messages.slice(-1).pop().date;
             },8000)
