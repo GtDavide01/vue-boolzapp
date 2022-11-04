@@ -1,3 +1,4 @@
+const dt = luxon.DateTime;
 const { createApp } = Vue;
 
 createApp({
@@ -168,7 +169,6 @@ createApp({
             ],
             thisChat: 0,
             userMessage: "",
-            data: new Date(),
             userSearch: "",
             visible: false,
             thisMessage :0,
@@ -181,7 +181,8 @@ createApp({
                 "Tutto bene grazie , va alla grande!"
             ],
             randomNumber : "",
-            messageState : ""
+            messageState : "",
+            dt: ""
         }
     },
     methods:{
@@ -194,13 +195,13 @@ createApp({
                 fraseRandom = this.listWords[this.randomNumber];
                 this.contacts[this.thisChat].messages.push(
                     {
-                        date: "Oggi ,"+this.data.getHours()+":"+this.data.getMinutes(),
+                        date: dt.now().setLocale("it").toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                         message: fraseRandom,
                         status: 'received'
                     }
                 )
                 this.messageState = "Sta scrivendo..."
-            } ,2000)
+            } ,1000)
             setTimeout(() =>{
                 this.messageState = "Online"
             },4000)
@@ -213,7 +214,7 @@ createApp({
             if(this.userMessage){
                 this.contacts[this.thisChat].messages.push(
                     {
-                        date: "Oggi ,"+this.data.getHours()+":"+this.data.getMinutes(),
+                        date: dt.now().setLocale("it").toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
                         message: this.userMessage,
                         status: 'sent'
                     }
