@@ -207,6 +207,7 @@ createApp({
             setTimeout(() =>{
                 this.messageState =  "Ultimo accesso "+this.contacts[this.thisChat].messages.slice(-1).pop().date;
             },8000);
+           
         },
         // Aggiunge il messaggio inserito dall'utente 
         addMessage: function(){
@@ -221,6 +222,9 @@ createApp({
                 )
                 this.setMessage();
                 this.userMessage=""; 
+                this.$nextTick(() => {
+                    this.$refs.chatWindow.scrollTop  = this.$refs.chatWindow.scrollHeight;
+                })
                 
             }
         },
