@@ -65,7 +65,7 @@
                         </div>
                         <!-- chat -->
                         <div class="chatsidebar">
-                            <div @click="showThisChat(indice)" class="row" v-for="(valore , indice) in contacts" v-show="contacts[indice].name.includes(userSearch)">
+                            <div @click="showThisChat(indice)" class="row" v-for="(valore , indice) in contacts" v-show="contacts[indice].name.toLowerCase().includes(userSearch.toLowerCase())">
                                 <div class="avatar">
                                     <img :src='"img/avatar"+valore.avatar+".jpg"' alt="">
                                     <div class="chatinfo">

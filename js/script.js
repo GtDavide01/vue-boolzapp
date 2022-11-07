@@ -262,7 +262,7 @@ createApp({
         },
         //elimina tutte le chat del contatto selezionato
         deleteAllChat: function(){
-            this.contacts[this.thisChat].messages.splice(this.thisMessage , 10);
+            this.contacts[this.thisChat].messages.splice(this.thisMessage , 100);
         },
         //elimina il contatto selezionato
         deleteThisChat: function(){
